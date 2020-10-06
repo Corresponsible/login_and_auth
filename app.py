@@ -7,7 +7,6 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL') or 'sqlite:///my_database.db'
 app.config['SECRET_KEY'] = 'the random string'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = "True"
-
 db = SQLAlchemy(app)
 
 login = LoginManager(app)
